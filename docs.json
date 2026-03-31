@@ -46,7 +46,22 @@
           {
             "group": "Launching",
             "pages": [
-              "going-live/embedding"
+              "going-live/embedding",
+              "going-live/allowed-origins",
+              "going-live/notifications"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Data & Analytics",
+        "groups": [
+          {
+            "group": "Your Data",
+            "pages": [
+              "data/enquiries",
+              "data/estimations",
+              "data/analytics"
             ]
           }
         ]
@@ -57,7 +72,8 @@
           {
             "group": "Support",
             "pages": [
-              "help/faq"
+              "help/faq",
+              "help/troubleshooting"
             ]
           }
         ]

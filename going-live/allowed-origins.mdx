@@ -1,0 +1,62 @@
+---
+title: "Allowed Origins"
+---
+
+Allowed Origins tell the estimator which websites are permitted to load it. This is a security feature — it prevents someone from copying your embed code and using it on an unauthorised site.
+
+To configure your allowed origins, go to **Settings → Allowed Origins** (you'll also find this in the Embed Code tab).
+
+## Adding your domain
+
+<Steps>
+  <Step title="Go to Settings">
+    Click **Settings** in the sidebar, then find the **Allowed Origins** section.
+  </Step>
+  <Step title="Enter your website's URL">
+    Add your full website address including `https://` — for example, `https://www.smithandsons.co.nz`.
+  </Step>
+  <Step title="Save">
+    Click **Save** or **Add** to confirm. The domain takes effect immediately.
+  </Step>
+</Steps>
+
+## Common patterns
+
+Most websites use one of these formats:
+
+| Format | Use when |
+|--------|----------|
+| `https://www.yoursite.co.nz` | Your site uses the www prefix (most common) |
+| `https://yoursite.co.nz` | Your site doesn't use www |
+
+If you're not sure which format your site uses, add both — there's no downside to having multiple origins listed.
+
+## Adding multiple origins
+
+You can add more than one domain. This is useful if you have:
+
+- A staging or test version of your site (e.g. `https://staging.yoursite.co.nz`)
+- Multiple websites for different branches or brands
+- A local development environment you use for testing
+
+Simply add each domain on its own line.
+
+## Troubleshooting
+
+If the estimator shows a blank space or doesn't appear on your page after adding the embed code:
+
+<Steps>
+  <Step title="Check the origin matches exactly">
+    The domain in Allowed Origins must match your website's URL exactly — including `https://` and whether or not it uses `www`. A mismatch of any kind will block the estimator from loading.
+  </Step>
+  <Step title="Try adding both www and non-www versions">
+    If you're not certain which your site uses, add both `https://www.yoursite.co.nz` and `https://yoursite.co.nz`.
+  </Step>
+  <Step title="Check your browser's developer console">
+    Press **F12** (or right-click anywhere on the page and choose Inspect) to open developer tools. Click the **Console** tab and look for any errors mentioning "CORS" or "blocked". These errors will tell you exactly which origin was rejected.
+  </Step>
+</Steps>
+
+<Tip>
+  If your web developer is setting this up, share this page with them. The CORS error message in the browser console will tell them exactly what domain needs to be added.
+</Tip>

@@ -1,0 +1,70 @@
+---
+title: "Troubleshooting"
+description: "Common issues and how to fix them."
+---
+
+<AccordionGroup>
+  <Accordion title="The estimator isn't appearing on my website">
+    There are two common causes:
+
+    **Your domain isn't in the allowed list.** Go to **Settings → Allowed Origins** and check that your website domain is listed. The domain must match exactly — including `https://` — so `https://www.yourfuneralhome.co.nz` and `https://yourfuneralhome.co.nz` are treated as different entries. Add both if your site redirects between them.
+
+    **The embed code isn't placed correctly.** The embed snippet needs to be present on the page where you want the estimator to appear. If you're not sure where to put it, ask your web developer to check. They can also open the browser console (F12 in most browsers) and look for any error messages that point to what's going wrong.
+  </Accordion>
+
+  <Accordion title="I'm not receiving notification emails">
+    Work through these checks in order:
+
+    1. Go to **Settings → Notifications** and confirm the correct email addresses are listed.
+    2. Check your spam or junk folder — notification emails occasionally get caught there, especially for new domains.
+    3. If you're using branch-specific notifications, open the branch settings and confirm email addresses are configured there as well. Branch notification settings override the general setting.
+
+    <Note>
+      There is a limit of 3 resends per enquiry per day. If you've already resent a notification several times today, you'll need to wait until tomorrow or view the enquiry directly in your dashboard.
+    </Note>
+  </Accordion>
+
+  <Accordion title="I can't log in">
+    Start with a password reset:
+
+    1. Go to [app.funeralestimatorpro.com](https://app.funeralestimatorpro.com)
+    2. Click **Forgot password** below the login form
+    3. Enter your email address and check your inbox (including spam)
+    4. Follow the link to set a new password
+
+    If you've done that and still can't get in, email us at [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com) with your funeral home name and we'll restore your access.
+  </Accordion>
+
+  <Accordion title="Prices are showing incorrectly">
+    The most common cause is a mismatch between how prices are entered and how tax is configured.
+
+    Go to **Estimator → Tax & Pricing** and check your tax display setting:
+
+    - **All prices should be entered excluding tax.** The estimator applies tax on top when displaying to families, based on your tax settings.
+    - If prices look roughly doubled, you may have the tax display set to inclusive while your prices are already entered with tax included. Switch the display setting to exclusive, or re-enter your prices excluding tax.
+
+    If a specific option looks wrong, open that option in **Categories & Options** and verify the price field directly.
+  </Accordion>
+
+  <Accordion title="A category isn't showing in the estimator">
+    Check these things in order:
+
+    1. **The category must be set to active.** Open the category in **Categories & Options** and confirm the Active toggle is on.
+    2. **It needs at least one active option.** A category with no active options won't appear to families, even if the category itself is active. Check that at least one option inside it is switched on and has a price.
+    3. **Check visibility rules.** Categories can be set to show only for certain service types. If a family has selected a service type that this category is hidden for, it won't appear. Open the category settings and review the visibility section.
+  </Accordion>
+
+  <Accordion title="Images aren't loading">
+    A few things to check:
+
+    - **File size:** Images must be under 5MB. Anything larger won't upload successfully.
+    - **File format:** Only JPG, PNG, and WebP files are supported. If you're using a TIFF, HEIC, or other format, convert it first.
+    - **Recent uploads:** If you just uploaded an image, give it a minute or two to process, then refresh the page. New images sometimes take a moment before they're ready to display.
+
+    If an image was uploaded some time ago and still isn't showing, try removing it and re-uploading. If the problem persists, contact us at [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com).
+  </Accordion>
+</AccordionGroup>
+
+---
+
+If none of these solve your issue, email [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com) with a description of the problem and we'll take a look.
