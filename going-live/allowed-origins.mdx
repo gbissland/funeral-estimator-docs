@@ -2,61 +2,36 @@
 title: "Allowed Origins"
 ---
 
-Allowed Origins tell the estimator which websites are permitted to load it. This is a security feature — it prevents someone from copying your embed code and using it on an unauthorised site.
+Your estimator will only load on websites that have been approved for your account. This is a security measure — it prevents someone from copying your embed code and displaying your estimator on an unauthorised site.
 
-To configure your allowed origins, go to **Settings → Allowed Origins** (you'll also find this in the Embed Code tab).
+## How it works
 
-## Adding your domain
+When the estimator loads on a webpage, it checks whether that website's domain has been added to your allowed list. If the domain matches, the estimator displays normally. If it doesn't match, the estimator won't load — families will just see a blank space where it should be.
 
-<Steps>
-  <Step title="Go to Settings">
-    Click **Settings** in the sidebar, then find the **Allowed Origins** section.
-  </Step>
-  <Step title="Enter your website's URL">
-    Add your full website address including `https://` — for example, `https://www.smithandsons.co.nz`.
-  </Step>
-  <Step title="Save">
-    Click **Save** or **Add** to confirm. The domain takes effect immediately.
-  </Step>
-</Steps>
+## Which domains are configured for you
 
-## Common patterns
+Your website domain is set up when your account is created. If you operate multiple websites or have a staging site for testing, those can be added too.
 
-Most websites use one of these formats:
+<Info>
+  You don't need to manage this yourself. Your allowed domains are configured by us as part of your onboarding. If you need to add or change a domain — for example, if you're moving to a new website — just get in touch.
+</Info>
 
-| Format | Use when |
-|--------|----------|
-| `https://www.yoursite.co.nz` | Your site uses the www prefix (most common) |
-| `https://yoursite.co.nz` | Your site doesn't use www |
+## Common scenarios where you might need a change
 
-If you're not sure which format your site uses, add both — there's no downside to having multiple origins listed.
+- **You're launching a new website** and the domain has changed
+- **You have a staging or test site** where you want to preview the estimator before going live
+- **You've added a second website** for a different branch or brand
+- **Your site has moved from `www.` to non-`www.`** (or the other way around) — these are treated as different domains
 
-## Adding multiple origins
+## If the estimator isn't loading
 
-You can add more than one domain. This is useful if you have:
+If the estimator shows a blank space or doesn't appear on your page, a domain mismatch is the most common cause. Before reaching out, check that:
 
-- A staging or test version of your site (e.g. `https://staging.yoursite.co.nz`)
-- Multiple websites for different branches or brands
-- A local development environment you use for testing
+1. The embed code is placed correctly on the page (see [Adding the Estimator to Your Website](/going-live/embedding))
+2. Your website address hasn't changed recently
 
-Simply add each domain on its own line.
-
-## Troubleshooting
-
-If the estimator shows a blank space or doesn't appear on your page after adding the embed code:
-
-<Steps>
-  <Step title="Check the origin matches exactly">
-    The domain in Allowed Origins must match your website's URL exactly — including `https://` and whether or not it uses `www`. A mismatch of any kind will block the estimator from loading.
-  </Step>
-  <Step title="Try adding both www and non-www versions">
-    If you're not certain which your site uses, add both `https://www.yoursite.co.nz` and `https://yoursite.co.nz`.
-  </Step>
-  <Step title="Check your browser's developer console">
-    Press **F12** (or right-click anywhere on the page and choose Inspect) to open developer tools. Click the **Console** tab and look for any errors mentioning "CORS" or "blocked". These errors will tell you exactly which origin was rejected.
-  </Step>
-</Steps>
+If everything looks right and it's still not loading, contact us at [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com) and we'll check your allowed domains.
 
 <Tip>
-  If your web developer is setting this up, share this page with them. The CORS error message in the browser console will tell them exactly what domain needs to be added.
+  If your web developer is troubleshooting, they can open the browser's developer console (press F12) and look for errors mentioning "CORS" or "blocked". The error message will show exactly which domain needs to be added.
 </Tip>

@@ -6,7 +6,7 @@ description: "How to embed your estimator on your funeral home website."
 Once you've configured your estimator, the final step is adding it to your website. This is typically a one-time task. If someone else manages your website — a web designer or agency — you can forward this page to them.
 
 <Info>
-  If someone else manages your website, send them this page. They'll need the embed code below and your website's domain added to Allowed Origins (see the next section).
+  If someone else manages your website, send them this page. They'll need the embed code below. Your website's domain will already be configured as part of your setup — see [Allowed Origins](/going-live/allowed-origins) if you need to check or change it.
 </Info>
 
 ## Getting your embed code
@@ -14,11 +14,11 @@ Once you've configured your estimator, the final step is adding it to your websi
 Go to **Settings → Embed Code**. You'll see a snippet that looks like this:
 
 ```html
+<script src="https://widget.funeralestimatorpro.com/estimator.js" type="module"></script>
 <funeral-estimator data-tenant="your-slug"></funeral-estimator>
-<script src="https://widget.funeralestimatorpro.com/estimator.js" defer></script>
 ```
 
-The `data-tenant` value is unique to your account — don't change it.
+The `data-tenant` value is unique to your account — don't change it. The script tag must come before the `<funeral-estimator>` element.
 
 ## Where to place the code
 
@@ -65,5 +65,5 @@ Place the code in the page body at the point where you want the estimator to ren
 Once the code is on your page, visit that page in your browser and confirm the estimator loads and works correctly. Walk through a full estimate to make sure everything is displaying as expected.
 
 <Warning>
-  If the estimator shows a blank space or doesn't load at all, the most common cause is a missing domain in your Allowed Origins settings. Go to **Settings → Allowed Origins** and make sure your website's domain is listed. See the [Allowed Origins](/going-live/allowed-origins) page for details.
+  If the estimator shows a blank space or doesn't load at all, the most common cause is that your website's domain hasn't been added to your allowed list. See the [Allowed Origins](/going-live/allowed-origins) page for details, or contact us at [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com).
 </Warning>
