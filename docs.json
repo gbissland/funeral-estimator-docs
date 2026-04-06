@@ -101,5 +101,13 @@
   },
   "footer": {
     "socials": {}
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude", "perplexity"]
+  },
+  "integrations": {
+    "plausible": {
+      "domain": "help.funeralestimatorpro.com"
+    }
   }
 }
