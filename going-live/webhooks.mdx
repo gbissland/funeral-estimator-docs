@@ -1,0 +1,149 @@
+---
+title: "Webhook Notifications"
+description: "Get notified in Microsoft Teams, Slack, Zapier, or your CRM when a new enquiry comes in."
+---
+
+Webhooks send enquiry details to another system the moment a family submits their contact details. Think of it as an instant alert — the information arrives in whichever tool you use to manage enquiries, without you needing to check your email.
+
+Common uses:
+
+- Get a notification in your **Microsoft Teams** channel
+- Send enquiry details to **Slack**
+- Trigger a workflow in **Zapier** or **Make** to create a CRM record
+- Feed enquiry data directly into your practice management system
+
+To configure webhooks, go to **Settings → Integrations**.
+
+## Setting up your webhook
+
+<Steps>
+  <Step title="Get a webhook URL from your receiving tool">
+    See the guides below for Microsoft Teams, Slack, or Zapier.
+  </Step>
+  <Step title="Go to Settings → Integrations">
+    You'll see the **Webhook Notifications** section.
+  </Step>
+  <Step title="Paste your webhook URL">
+    Enter the URL from your receiving tool and click **Save Changes**. A webhook secret is generated automatically.
+  </Step>
+  <Step title="Test it">
+    Click **Test Webhook** to send a sample notification. You should see it appear in your connected tool within a few seconds.
+  </Step>
+</Steps>
+
+## Microsoft Teams
+
+<Steps>
+  <Step title="Choose a channel">
+    In Teams, go to the channel where you want enquiry notifications to appear.
+  </Step>
+  <Step title="Add an incoming webhook connector">
+    Click the **···** menu next to the channel name, then **Connectors** (or **Manage channel** → **Connectors**). Find **Incoming Webhook** and click **Configure**.
+  </Step>
+  <Step title="Name it and create">
+    Give it a name like "Funeral Estimator" and click **Create**.
+  </Step>
+  <Step title="Copy the URL">
+    Copy the webhook URL that appears.
+  </Step>
+  <Step title="Paste in your dashboard">
+    Go to **Settings → Integrations**, paste the URL, and click **Save Changes**.
+  </Step>
+</Steps>
+
+## Slack
+
+<Steps>
+  <Step title="Create a Slack app">
+    Go to [api.slack.com/apps](https://api.slack.com/apps) and click **Create New App**.
+  </Step>
+  <Step title="Enable incoming webhooks">
+    Under **Incoming Webhooks**, toggle it on.
+  </Step>
+  <Step title="Add to a channel">
+    Click **Add New Webhook to Workspace** and select the channel where notifications should appear.
+  </Step>
+  <Step title="Copy the URL">
+    Copy the webhook URL that Slack generates.
+  </Step>
+  <Step title="Paste in your dashboard">
+    Go to **Settings → Integrations**, paste the URL, and click **Save Changes**.
+  </Step>
+</Steps>
+
+## Zapier
+
+<Steps>
+  <Step title="Create a new Zap">
+    In Zapier, start a new Zap.
+  </Step>
+  <Step title="Choose the webhook trigger">
+    Select **Webhooks by Zapier** as the trigger and choose **Catch Hook**.
+  </Step>
+  <Step title="Copy the URL">
+    Zapier gives you a unique webhook URL. Copy it.
+  </Step>
+  <Step title="Paste and test">
+    Go to **Settings → Integrations**, paste the URL, click **Save Changes**, then click **Test Webhook**. Zapier will pick up the test data for mapping to your next step (CRM, spreadsheet, email, etc.).
+  </Step>
+</Steps>
+
+## Testing your webhook
+
+Click **Test Webhook** in Settings → Integrations. This sends a sample notification with:
+
+- **Name:** "Test from Funeral Estimator Pro"
+- **Notes:** A message confirming the integration is working
+- No real customer data is sent
+
+You should see it appear in your connected tool within a few seconds. If it doesn't arrive, check the troubleshooting section below.
+
+## What the webhook sends
+
+Each webhook delivers a JSON payload containing:
+
+| Field | Description |
+|-------|-------------|
+| `lead.name` | Family member's name |
+| `lead.email` | Email address |
+| `lead.phone` | Phone number (if provided) |
+| `lead.preferred_contact` | Email or phone |
+| `lead.notes` | Any message from the family |
+| `estimate.total` | Estimate total amount |
+| `estimate.service_type` | e.g. Cremation, Burial |
+| `estimate.estimate_url` | Link to the branded estimate page |
+| `estimate.selections` | Every selected item with category, name, price, and quantity |
+| `branch.name` | Branch name (if applicable) |
+
+<Tip>
+  The webhook includes the full estimate breakdown — every category, option, and price the family selected. This means your CRM or practice management system can have the complete picture without anyone re-entering data.
+</Tip>
+
+## Webhook secret (for developers)
+
+Each webhook includes an `X-Webhook-Signature` header containing an HMAC-SHA256 signature of the request body. If you're building a custom integration, you can verify the signature to confirm the webhook came from Funeral Estimator Pro:
+
+1. Get the raw request body (before parsing JSON)
+2. Compute HMAC-SHA256 using your webhook secret
+3. Compare with the value after `sha256=` in the header
+
+Your webhook secret is shown in **Settings → Integrations**. You can copy it, reveal it, or regenerate it at any time.
+
+<Note>
+  Most tools (Teams, Slack, Zapier) don't need the webhook secret — it's only relevant if you're building a custom integration and want to verify the sender.
+</Note>
+
+## Troubleshooting
+
+**Webhook not arriving?**
+
+- Check the URL is correct — try clicking **Test Webhook** to see what happens
+- Make sure your receiving tool is set up to accept POST requests
+- Check if a firewall or security tool is blocking incoming requests from external services
+
+**The Test button shows an error?**
+
+- **Status 0** means we couldn't reach the URL at all — double-check it's correct and publicly accessible
+- **Status 4xx or 5xx** means your endpoint returned an error — check the receiving tool's configuration
+
+If you're still stuck, contact us at [support@funeralestimatorpro.com](mailto:support@funeralestimatorpro.com) and we'll help you get connected.

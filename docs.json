@@ -50,6 +50,7 @@
               "going-live/embedding",
               "going-live/allowed-origins",
               "going-live/notifications",
+              "going-live/webhooks",
               "going-live/share-pages"
             ]
           }
