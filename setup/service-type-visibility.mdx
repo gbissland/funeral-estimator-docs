@@ -1,0 +1,127 @@
+---
+title: "Service Type Visibility"
+description: "Control which categories appear for each service type, so families only see what's relevant to their choice."
+---
+
+Not every category makes sense for every service type. Caskets belong to burial. Urns belong to cremation. A catering category might apply to a traditional cremation but not to a direct cremation. Visibility settings let you tailor the estimator so families only see what's relevant to their situation.
+
+To manage visibility, open any category in **Estimator → Categories & Pricing** and scroll to the **When this appears** section.
+
+---
+
+## The three visibility options
+
+For each service type (and sub-type), you can set one of three visibility states for each category:
+
+| Setting | What families see | When to use it |
+|---|---|---|
+| **Active** | The category appears and is fully interactive | The category is relevant and families should be able to choose from it |
+| **Greyed out** | The category is visible but dimmed, with a short note explaining it doesn't apply | The category isn't relevant, but you want families to know it exists (so they don't wonder if something is missing) |
+| **Hidden** | The category doesn't appear at all | The category is completely irrelevant and would only cause confusion |
+
+<Tip>
+  When in doubt, **Hidden** is usually cleaner than **Greyed out**. Families don't need to see a Caskets category when they've chosen direct cremation — it just adds noise. Reserve Greyed out for situations where you genuinely want families to know the option exists, even if it doesn't apply to their choice.
+</Tip>
+
+---
+
+## Common visibility patterns
+
+Here are the most common configurations for NZ funeral homes:
+
+### Burial service type
+
+| Category | Visibility |
+|---|---|
+| Caskets | Active |
+| Urns | Hidden |
+| Floral arrangements | Active |
+| Venue / Chapel | Active |
+| Catering | Active |
+| Crematorium fee | Hidden |
+| Death certificates | Active |
+| Professional services | Active |
+
+### Cremation service type (traditional)
+
+| Category | Visibility |
+|---|---|
+| Caskets | Hidden |
+| Urns | Active |
+| Floral arrangements | Active |
+| Venue / Chapel | Active |
+| Catering | Active |
+| Crematorium fee | Active |
+| Death certificates | Active |
+| Professional services | Active |
+
+### Direct cremation sub-type
+
+| Category | Visibility |
+|---|---|
+| Caskets | Hidden |
+| Urns | Active |
+| Floral arrangements | Greyed out (or Hidden) |
+| Venue / Chapel | Hidden |
+| Catering | Hidden |
+| Crematorium fee | Active |
+| Death certificates | Active |
+| Professional services | Active |
+
+---
+
+## Setting visibility for a category
+
+<Steps>
+  <Step title="Open the category">
+    Go to **Estimator → Categories & Pricing** and click the category name.
+  </Step>
+  <Step title="Find the 'When this appears' section">
+    Scroll down past the name, description, and component type fields.
+  </Step>
+  <Step title="Review each service type">
+    You'll see a row for each of your service types (and any sub-types). Each row has a visibility selector showing Active, Greyed out, or Hidden.
+  </Step>
+  <Step title="Set the visibility for each">
+    Choose the right setting for each service type. Changes are saved when you click **Save category**.
+  </Step>
+  <Step title="Preview the result">
+    Open **Estimator → Preview** and switch between service types to see how the estimator looks for each one.
+  </Step>
+</Steps>
+
+---
+
+## How visibility affects the estimate
+
+When a category is hidden for a service type, it doesn't appear in the estimator at all — it's as if it doesn't exist for that family. Any options within it won't be included in the estimate.
+
+When a category is greyed out, it appears in the estimator's flow but is visually dimmed and can't be interacted with. A short note is displayed explaining why it doesn't apply. The category won't contribute any cost to the estimate.
+
+---
+
+## Sub-type visibility
+
+If you've set up sub-types (for example, Direct Cremation and Traditional Cremation within Cremation), visibility can be configured separately for each sub-type.
+
+This is the most powerful way to tailor the estimator. A family choosing Direct Cremation and a family choosing Traditional Cremation are planning quite different services — what they see in the estimator should reflect that.
+
+Sub-type visibility rows appear in the same **When this appears** section, nested under their parent service type.
+
+<Note>
+  If you haven't set up sub-types yet, you'll only see rows for your top-level service types. Sub-type visibility becomes available once you add sub-types in **Settings → Service Types**. See [Service Types and Base Pricing](/setup/service-types) for how sub-types work.
+</Note>
+
+---
+
+## Relationship to the estimator flow
+
+Visibility settings and service type choices work together to create a personalised estimator flow. Here's the sequence:
+
+1. Family arrives at the greeting screen
+2. Family chooses a service type (and sub-type if applicable)
+3. The estimator hides or shows categories based on your visibility settings
+4. Family works through only the categories that apply to their choice
+5. The estimate reflects only the costs relevant to their service type
+
+This means families planning a direct cremation won't see venue hire or casket options — the estimator feels cleaner, faster, and more relevant to them.

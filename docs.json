@@ -31,12 +31,14 @@
             "pages": [
               "setup/business-details",
               "setup/service-types",
-              "setup/categories-and-options",
+              "setup/category-settings",
+              "setup/category-options",
+              "setup/service-type-visibility",
+              "setup/staff-profiles",
               "setup/text-and-wording",
               "setup/appearance",
               "setup/preview",
               "setup/tax-and-pricing",
-              "setup/staff-profiles",
               "setup/branches"
             ]
           }

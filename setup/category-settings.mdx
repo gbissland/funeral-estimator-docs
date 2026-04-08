@@ -1,0 +1,126 @@
+---
+title: "Understanding Category Settings"
+description: "What each category setting does, and how to configure your categories for the right families see the right things."
+---
+
+Categories are the building blocks of your estimator. Each one groups related choices — Caskets, Flowers, Venues, Catering — and the settings you apply to a category shape exactly how it behaves for families.
+
+To open a category's settings, go to **Estimator → Categories & Pricing** and click any category name.
+
+---
+
+## What families see
+
+The first section of the category editor controls the text families see in the estimator.
+
+- **Name** — The heading above the category (e.g. "Caskets", "Floral Arrangements", "Catering"). Use plain, familiar language. Avoid internal jargon or supplier codes.
+- **Description** — A short sentence below the heading that helps families understand what this category covers. One sentence is usually enough: "Choose the casket for the service and burial."
+- **Empty state message** — What families see if no options are visible for their selection. For example, if Caskets is hidden for Direct Cremation, you might not need an empty state at all — but if something changes dynamically, this message reassures families.
+
+---
+
+## How this category works
+
+These settings control the functional behaviour of the category.
+
+### Component type
+
+The component type determines how options are displayed to families. Choosing the right one makes a real difference to how natural and easy the estimator feels.
+
+| Component type | What families see | Best for |
+|---|---|---|
+| **Image cards** | Visual cards with photos, name, and price. Tap to select. | Caskets, urns, coffins, memorial items — any choice where seeing the item matters |
+| **Text list** | A clean list with name, description, and price. No images. | Venues, transport, service extras, certificates — choices where the description matters more |
+| **Quantity stepper** | A single item with a + and − counter. Price multiplies by quantity. | Death certificates, order of service booklets, newspaper notices |
+| **Per-person menu** | A menu of options combined with a guest count. Price = option price × attendees. | Catering packages priced per head |
+| **Included item** | Always shown, always included. Families can see it but can't add or remove it. | Professional services fee, fixed third-party charges |
+
+<Tip>
+  Not sure which component type to use? Ask yourself: "Do families need to choose between multiple options, or is this a fixed part of the service?" If it's fixed, use **Included item**. If there are visual choices, use **Image cards**. If it's a list without strong visual differences, use **Text list**.
+</Tip>
+
+### Cost type
+
+Cost type controls how the estimate is grouped and labelled in the estimate summary. Families see costs separated into three sections, which helps them understand what they're actually paying for.
+
+| Cost type | What it covers | How it appears in the estimate |
+|---|---|---|
+| **Included** | Your professional services, team, facilities, and coordination | Grouped under "Included in your service" |
+| **Optional** | Extras families choose: flowers, catering, memorial items, printed booklets | Grouped under "Optional additions" |
+| **Third-party disbursement** | Fees collected on behalf of another provider: crematorium, doctor, council, registry | Shown separately with a note that these are external charges |
+
+<Info>
+  Third-party disbursements are shown in a dedicated section of the estimate with a short explanation. This transparency is important — families can see that a crematorium fee is charged by the crematorium, not by you. It builds trust and avoids misunderstandings about what your fee actually covers.
+</Info>
+
+### Pricing type
+
+Pricing type determines how the cost of this category is calculated.
+
+| Pricing type | How it works | Use when |
+|---|---|---|
+| **Fixed** | One price, regardless of how many people attend | The cost doesn't change with attendee numbers |
+| **Per person** | Price × number of attendees (from the greeting screen) | Catering, per-head venue charges |
+| **Per unit** | Price × quantity chosen by the family | Certificates, booklets, copies |
+
+---
+
+## When this appears
+
+The **visibility** settings control which service types and sub-types show this category.
+
+Different service types suit different categories. Caskets make sense for burial. Urns make sense for cremation. Direct cremation likely doesn't need a catering category at all.
+
+You have three visibility options for each service type:
+
+| Setting | What families see |
+|---|---|
+| **Active** | The category appears and is fully interactive |
+| **Greyed out** | The category is visible but dimmed, with a note explaining it doesn't apply to this service type |
+| **Hidden** | The category doesn't appear at all |
+
+See [Service Type Visibility](/setup/service-type-visibility) for full details on configuring this.
+
+---
+
+## Display options
+
+A few additional settings that affect how the category is presented.
+
+- **Required vs Optional** — Required categories must be engaged with before families can continue. Optional categories include a "Skip this section" option for families who don't need them. Mark catering as optional if not all families will want it; mark caskets as required if burial families must choose one.
+- **Category icon** — Choose an icon that represents the category. Icons are decorative and pulled from your chosen icon theme (set in Appearance).
+- **Show total in sticky bar** — The sticky price bar at the bottom of the screen shows the running estimate total. For most categories this is on by default.
+
+---
+
+## Link to your website
+
+If you have more information about a category on your website, you can add a link here. It appears as a small "Learn more" button within the category, opening in a new tab.
+
+This is useful for:
+- Linking to a casket gallery page
+- Pointing to a venues page with photos and floor plans
+- Showing catering menus in more detail
+
+<Note>
+  Keep links optional and supplementary. The estimator should stand on its own. A link to more info is a nice touch; relying on it to explain pricing or options is a sign that your descriptions might need more detail.
+</Note>
+
+---
+
+## Common configurations
+
+Here are the settings that work well for the most common categories:
+
+| Category | Component type | Cost type | Pricing type |
+|---|---|---|---|
+| Caskets | Image cards | Optional | Fixed |
+| Urns | Image cards | Optional | Fixed |
+| Floral arrangements | Image cards or Text list | Optional | Fixed |
+| Venue / Chapel | Text list | Optional | Fixed |
+| Catering | Per-person menu | Optional | Per person |
+| Death certificates | Quantity stepper | Third-party disbursement | Per unit |
+| Crematorium fee | Included item | Third-party disbursement | Fixed |
+| Professional services | Included item | Included | Fixed |
+| Order of service booklets | Quantity stepper | Optional | Per unit |
+| Transport | Text list | Included or Optional | Fixed |
