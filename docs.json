@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Funeral Estimator Pro",
+  "name": "Funeral Estimator Pro Help",
   "colors": {
     "primary": "#1a1a1a",
     "light": "#8B7355",
@@ -90,10 +90,6 @@
       }
     ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
@@ -103,12 +99,21 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Go to Dashboard",
+      "label": "Open Funeral Estimator Pro",
       "href": "https://app.funeralestimatorpro.com"
     }
   },
   "footer": {
-    "socials": {}
+    "links": [
+      {
+        "header": "Funeral Estimator Pro",
+        "items": [
+          { "label": "Website", "href": "https://funeralestimatorpro.com" },
+          { "label": "Log In", "href": "https://app.funeralestimatorpro.com" },
+          { "label": "Contact Support", "href": "mailto:support@funeralestimatorpro.com" }
+        ]
+      }
+    ]
   },
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude", "perplexity"]
