@@ -168,11 +168,43 @@ A single item with a + and − counter. Families choose how many they need. The 
 
 ### Per-person selection
 
-A menu of options combined with a quantity control. Families choose a catering package, and the total cost is calculated based on the number of attendees they entered on the greeting screen.
+A list of options where each has a per-person price and a quantity control. Families tick the ones they want, and the total cost is calculated as the per-person price multiplied by the number of attendees they entered on the greeting screen. They can adjust the quantity manually if they want it for a different number of people.
 
-**Best for:** Catering packages where the price-per-head model applies.
+**Best for:** Catering packages, order of service printing, drinks service, attendee-scaled memorial items — anything that scales with guest count.
 
-**Example:** A Catering category with three menu options, Morning Tea, Light Lunch, and Full Reception. The family picks a menu, and the price is calculated as menu price × guest count. They can adjust the guest count from here if plans have changed.
+**Example:** A Catering category with three options — Morning Tea ($12 per person), Light Lunch ($25 per person), and Full Reception ($45 per person). The family selects Light Lunch, and the price is calculated as $25 × 30 guests = $750. They can step the quantity up or down from 30 if they only want to cater for a subset.
+
+#### Bundled + extras pattern
+
+Per-person selection works beautifully with a "bundled base + optional extras" pricing model. This lets you include something in the base package while still offering paid upgrades.
+
+**How to set it up:**
+
+1. Create the first option at **$0 per person** — this is what's bundled in your service type base price. It will display as "Included" instead of a dollar figure.
+2. Add further options above $0 per person — these are the paid upgrades.
+3. Use the description field to explain what's included at each level.
+
+**Example — Catering:**
+
+| Option | Per-person price | What families see |
+|---|---|---|
+| Basic morning tea (bundled) | $0 | "Included" |
+| Light lunch upgrade | $15 | $15 × 30 = $450 |
+| Full reception upgrade | $35 | $35 × 30 = $1,050 |
+
+**Example — Order of service sheets:**
+
+| Option | Per-person price | What families see |
+|---|---|---|
+| Black & white (bundled) | $0 | "Included" |
+| Colour single-sided | $3 | $3 × 30 = $90 |
+| Colour folded booklet | $5 | $5 × 30 = $150 |
+
+This pattern keeps your base package feeling generous (things are "included") while making clear upgrades transparent and easy to opt into. Families who don't need extras see nothing added to their estimate; families who want premium options see the exact cost.
+
+<Tip>
+  The families' attendee count flows through automatically from the greeting screen. If they later change their mind — say, they realise they want catering for 25 guests even though 40 are attending the service — they can adjust the quantity on that individual option without affecting the rest of the estimate.
+</Tip>
 
 ---
 
