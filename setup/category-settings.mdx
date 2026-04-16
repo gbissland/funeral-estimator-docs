@@ -30,7 +30,7 @@ The component type determines how options are displayed to families. Choosing th
 | Component type | What families see | Best for |
 |---|---|---|
 | **Image cards** | Visual cards with photos, name, and price. Tap to select. | Caskets, urns, coffins, memorial items — any choice where seeing the item matters |
-| **Text list** | A clean list with name, description, and price. No images. | Venues, transport, service extras, certificates — choices where the description matters more |
+| **Text list** | A clean list with name, description, and price. No images. Families pick one option, or multiple if you enable multi-select. | Venues, transport, service extras, certificates — choices where the description matters more |
 | **Quantity stepper** | A single item with a + and − counter. Price multiplies by quantity. | Death certificates, order of service booklets, newspaper notices |
 | **Per-person menu** | A menu of options combined with a guest count. Price = option price × attendees. | Catering packages priced per head |
 | **Included item** | Always shown, always included. Families can see it but can't add or remove it. | Professional services fee, fixed third-party charges |
@@ -88,8 +88,13 @@ See [Service Type Visibility](/setup/service-type-visibility) for full details o
 A few additional settings that affect how the category is presented.
 
 - **Required vs Optional** — Required categories must be engaged with before families can continue. Optional categories include a "Skip this section" option for families who don't need them. Mark catering as optional if not all families will want it; mark caskets as required if burial families must choose one.
+- **Allow multiple selections** — Available for **Text list** categories only. When enabled, families can tick several options instead of picking just one. Options with a $0 price are automatically shown as "Included" and permanently checked, so families can see what's already part of their package alongside optional extras they can add. See [Text list with multi-select](/setup/categories-and-options#allowing-multiple-selections) for setup examples.
 - **Category icon** — Choose an icon that represents the category. Icons are decorative and pulled from your chosen icon theme (set in Appearance).
 - **Show total in sticky bar** — The sticky price bar at the bottom of the screen shows the running estimate total. For most categories this is on by default.
+
+<Info>
+  When "Allow multiple selections" is turned on, the "Allow none" option is automatically hidden. Families can simply leave all the optional items unchecked if they don't want any of them.
+</Info>
 
 ---
 
@@ -124,3 +129,4 @@ Here are the settings that work well for the most common categories:
 | Professional services | Included item | Included | Fixed |
 | Order of service booklets | Quantity stepper | Optional | Per unit |
 | Transport | Text list | Included or Optional | Fixed |
+| Additional services | Text list (multi-select) | Optional | Fixed |
