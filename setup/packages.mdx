@@ -1,0 +1,91 @@
+---
+title: "Packages"
+description: "Offer pre-configured starting estimates alongside the build-from-scratch flow."
+---
+
+Packages are pre-configured starting points families can pick from the greeting screen. Think of them as a shortcut. A family picks a package, lands in the builder with everything pre-selected, and can still change anything before submitting.
+
+## When to use packages
+
+Packages work well when you already sell named bundles on your website ("Simply Family", "Simply Direct") and you want families to land on those presets in the estimator too.
+
+If you'd rather families always start from scratch, leave packages off. The greeting shows the familiar burial and cremation flow with no picker.
+
+## Creating a package
+
+<Steps>
+  <Step title="Go to Settings → Service Types">
+    Open the service type (Cremation or Burial) that the package belongs to.
+  </Step>
+  <Step title="Expand the sub-type you want to use">
+    You can use an existing sub-type or add a new one. A package is just a sub-type with pre-selected options.
+  </Step>
+  <Step title="Turn on the package toggle">
+    Flip **"This sub-type is a package with pre-selected options"** to on. A new inclusions editor appears below.
+  </Step>
+  <Step title="Pick the default option for each category">
+    For each category, pick the option that should be pre-selected. Leave a category as **No default** if you want the family to pick it themselves.
+  </Step>
+  <Step title="Save">
+    The sub-type is now a package. It will show in the picker on the greeting screen (once you turn the picker on).
+  </Step>
+</Steps>
+
+<Tip>
+  Use the starting price on your marketing website as your guide. The package's base price plus its pre-selected options should land close to the figure families already associate with that bundle.
+</Tip>
+
+## Turning on the picker
+
+Once you have at least one package:
+
+<Steps>
+  <Step title="Go to Settings → Estimator Flow">
+    The section lives on the main settings page.
+  </Step>
+  <Step title="Turn on Show package picker on greeting">
+    Families now see a secondary button between the service type cards and the guest count.
+  </Step>
+  <Step title="Edit the button label (optional)">
+    The default is "Or start with one of our suggested packages". Change it to match your wording.
+  </Step>
+</Steps>
+
+## Deep-linking from your website
+
+Each package has its own URL. Copy it from the **Copy link** button next to the package in Service Types, and wire it into the "Explore package" buttons on your existing marketing pages. Families clicking those buttons land in the estimator with the package already pre-filled.
+
+For embedded widgets, add a `data-package` attribute to the script tag:
+
+```html
+<script
+  src="https://widget.funeralestimatorpro.com/widget.js"
+  data-tenant="<your-slug>"
+  data-package="simply-family">
+</script>
+```
+
+<Info>
+  The `data-package` value is the package's slug, the same value that appears in the `?package=` URL. You'll see the slug in the **Copy link** button preview.
+</Info>
+
+## What families see
+
+- The normal burial and cremation cards are still there.
+- A secondary button sits between those cards and the guest count.
+- Clicking the button reveals your packages in a list, each showing the name, a short description, the starting price, and a **Configure this package** button.
+- Picking a package takes them straight into the builder with everything pre-selected.
+- They can change any selection. Their guest count is preserved, so a package advertised "for 40 guests" will recalculate if they chose 150 on the greeting.
+
+## How modifications appear in leads
+
+When a family starts from a package, their lead email highlights it.
+
+- **Subject line:** shows the package name plus whether they changed anything. For example, "New estimate from the Smith family: Simply Family (unchanged)" or the same with "+ adjustments" when they modified the defaults.
+- **Email body:** when modified, a section lists what was added, removed, changed, or re-quantified compared to the package's defaults.
+
+In the admin dashboard, leads started from a package get a small badge on the list (for example, "Simply Family +3"). Open the lead to see the full modifications diff alongside the final itemised estimate.
+
+<Note>
+  Package modifications are recorded at the moment the family submits. If you change the package's defaults later, existing leads continue to show the diff against the defaults that were in place when they submitted.
+</Note>

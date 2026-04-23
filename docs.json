@@ -35,6 +35,7 @@
             "pages": [
               "setup/business-details",
               "setup/service-types",
+              "setup/packages",
               "setup/category-settings",
               "setup/category-options",
               "setup/service-type-visibility",
