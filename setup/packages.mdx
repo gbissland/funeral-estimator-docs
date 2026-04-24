@@ -89,3 +89,18 @@ In the admin dashboard, leads started from a package get a small badge on the li
 <Note>
   Package modifications are recorded at the moment the family submits. If you change the package's defaults later, existing leads continue to show the diff against the defaults that were in place when they submitted.
 </Note>
+
+## "Not included in this package"
+
+Packages can spell out what's *not* covered alongside what is. When a family picks a package, their estimate shows a "Not included in this package" block with the items you've flagged.
+
+Two ways to flag something:
+
+- **Whole category.** Use the "List as Not included in this package" switch at the top of each category row in the package editor. The family sees one row, for example *"Hearse: not included"*. Good for categories that don't apply to this package at all.
+- **Specific items.** On multi-select categories like Printing or Ceremony Extras, click an option chip twice to cycle it through three states: neutral → included by default → listed as not included. Good for when you want to name a few upsell items without pulling the whole category out.
+
+## "Optional" block
+
+Separately, every estimate (package or not) shows an "Optional" block listing anything the family could still add. Unlike the Not-included block, you don't configure this directly. It's built from unticked items in categories you've already marked as optional (or in third-party categories, excluding anything you've marked as `cost_type_override = included`). Keeps the family oriented without needing any per-package setup.
+
+Both blocks sit above the total on the estimate screen. They're read-only for now. A future update will let families tap a row to add it to their estimate.
